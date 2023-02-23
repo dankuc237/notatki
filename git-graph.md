@@ -17,35 +17,36 @@ graph TB
         SPRAWDZ_WERSJE_GIT --> PIERWSZA_KONFIGURACJA_GIT
         PIERWSZA_KONFIGURACJA_GIT --> INICJALIZACJA_LOKALNEGO_REPO
         INICJALIZACJA_LOKALNEGO_REPO --> STWÓRZ_JAKIS_PLIK
-        INICJALIZACJA_LOKALNEGO_REPO --> STWÓRZ_PLIK_.GITIGNORE
         INICJALIZACJA_LOKALNEGO_REPO --> SPRAWDZ_ZMIANY_W_REPO
         INICJALIZACJA_LOKALNEGO_REPO --> DODAJ_PLIK_DO_STAGING_AREA
+        STWÓRZ_JAKIS_PLIK --> STWÓRZ_PLIK_.GITIGNORE
+        STWÓRZ_JAKIS_PLIK --> ZMIANA_KODU
         STWÓRZ_JAKIS_PLIK --> DODAJ_PLIK_DO_STAGING_AREA
         DODAJ_PLIK_DO_STAGING_AREA --> SPRAWDZ_ZMIANY_W_REPO
         SPRAWDZ_ZMIANY_W_REPO --> COMMIT_ZMIAN_DO_LOKALNEGO_REPO
-        STWÓRZ_JAKIS_PLIK --> ZMIANA_KODU
         ZMIANA_KODU --> DODAJ_PLIK_DO_STAGING_AREA
         DODAJ_PLIK_DO_STAGING_AREA --> COMMIT_ZMIAN_DO_LOKALNEGO_REPO 
         COMMIT_ZMIAN_DO_LOKALNEGO_REPO --> POKAZ_COMMIT_HISTORY
         COMMIT_ZMIAN_DO_LOKALNEGO_REPO --> COFNIJ_COMMIT
+        STWÓRZ_JAKIS_PLIK --> SPRAWDZ_ZMIANY_W_REPO
+        ZMIANA_KODU --> SPRAWDZ_ZMIANY_W_REPO
 ```
 ## GITHUB
 ```mermaid
 graph TB
-        CREATE_GITHUB_REPO["Należy stworzyć repozytorium<br>na github.com, przez przeglądarkę, na github.com"]
-        ADD_FILE_TO_REMOTE_REPO["Push istniejącego lokalnie repozytorium do github<br><code>$ git remote add origin https://github.com/GH_username/GH_reponame.git</code><br>- <code>git remote add</code> służy do dodania odnośnika do zdalnego repozytorium, którego nazwa jest <code>origin</code><br>- adres ten wskazuje na repozytorium na GitHubie,"]
-        PUSH_TO_GITHUB["Przesyłanie zmian do repozytorium zdalnego<br><code>$ git push https://GITHUB_ACCESS_TOKEN@github.com/GITHUB_USERNAME/REPOSITORY_NAME.git</code><br>origin -domyślna adres URL zdalnego repozytorium,(skonfigurowany <code>git remote add</code>)<br>main -nazwa głównej gałęzi (ang. main branch) w repozytorium"]
-        RENAME_MAIN["zmień nazwę głównego brancha na main<br><code>$ git branch -M main</code>"]
-        UPDATE_LOCAL_REPOSITORY["Pobranie (synchronizacja)<br>zmian z repozytorium zdalnego<br><code>$ git pull origin main</code>"]
+        STWORZ_REPO_NA_GH["Należy stworzyć repozytorium<br>na github.com, przez przeglądarkę, na github.com"]
+        POWIAZ_LOKALNE_I_ZDALNE_REPO["Push istniejącego lokalnie repozytorium do github<br><code>$ git remote add origin https://github.com/GH_username/GH_reponame.git</code><br>- <code>git remote add</code> służy do dodania odnośnika do zdalnego repozytorium, którego nazwa jest <code>origin</code><br>- adres ten wskazuje na repozytorium na GitHubie,"]
+        PUSH_DO_GITHUB["Przesyłanie zmian do repozytorium zdalnego<br><code>$ git push https://GITHUB_ACCESS_TOKEN@github.com/GITHUB_USERNAME/REPOSITORY_NAME.git</code><br>origin -domyślna adres URL zdalnego repozytorium,(skonfigurowany <code>git remote add</code>)<br>main -nazwa głównej gałęzi (ang. main branch) w repozytorium"]
+        ZMIEN_NAZWE_BRANCH_NA_MAIN["zmień nazwę głównego brancha na main<br><code>$ git branch -M main</code>"]
+        UPDATE_LOKALNEGO_REPO_Z_GH["Pobranie (synchronizacja)<br>zmian z repozytorium zdalnego<br><code>$ git pull origin main</code>"]
 
-        ADD_FILE_TO_REMOTE_REPO --> UPDATE_LOCAL_REPOSITORY
-        ADD_FILE_TO_REMOTE_REPO --> RENAME_MAIN
-        RENAME_MAIN --> PUSH_TO_GITHUB
-        CREATE_GITHUB_REPO --> ADD_FILE_TO_REMOTE_REPO
+        POWIAZ_LOKALNE_I_ZDALNE_REPO --> UPDATE_LOKALNEGO_REPO_Z_GH
+        POWIAZ_LOKALNE_I_ZDALNE_REPO --> ZMIEN_NAZWE_BRANCH_NA_MAIN
+        ZMIEN_NAZWE_BRANCH_NA_MAIN --> PUSH_DO_GITHUB
+        STWORZ_REPO_NA_GH --> POWIAZ_LOKALNE_I_ZDALNE_REPO
 
-        COMMIT_ZMIAN_DO_LOKALNEGO_REPO --> PUSH_TO_GITHUB
+        COMMIT_ZMIAN_DO_LOKALNEGO_REPO --> PUSH_DO_GITHUB
 ```
-        ZMIANA_KODU --> SPRAWDZ_ZMIANY_W_REPO
         SPRAWDZ_ZMIANY_W_REPO-->STWÓRZ_JAKIS_PLIK
 ---
 ## BRANCH
