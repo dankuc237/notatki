@@ -2,32 +2,32 @@
 ## BASIC WORKFLOW
 ```mermaid
 graph TB
-        CHECK_GIT["Sprawdź wersję git<br><code>$ git --version</code>"]
-        FIRST_SETTING_GIT["Konfiguracja git po raz pierwszy, można dodać nick i mail<br><code>$ git config --global user.name Your_Name<br>$ git config --global user.email Your-Email<br>Zobacz wszystkie dostępne pola<br>$ git config --list</code>"]
-        INITIALIZE_GIT_REPO["Inicjalizacja repozytorium<br>LOKALNIE w folderze tworzy folder .git<br><code>$ git init</code>"]
-        CREATE_GITIGNORE["Stwórz plik .gitignore<br><code>$ touch .gitignore</code>"]
-        FILE_CREATION["Stworzenie pliku"]
-        ADD_FILE_TO_STAGING_AREA["Dodanie pliku do staging area (jest śledzony)<br><code>$ git add nazwa_pliku #konkretny plik<br>$ git add . #wszystkie pliki w folderze</code>"]
-        CHECK_IF_FILES_ADDED_TO_TRACKING["Wyświetl jakie zmiany zostały wprowadzone<br>i czekają na commit w danym branchu<br><code>$ git status</code>"]    
-        CHANGES_IN_FILE["Wprowadzenie zmian w kodzie"]
-        COMMIT_CHANGES_TO_LOCAL_REPO["Commit zmian, z opisem commita, do obecnego brancha<br><code>$ git commit -m #quot;opis_commita#quot;</code>"]
-        PRINT_COMMIT_HISTORY["Wyświetlenie historii<br/>commitów<br><code>$ git log</code>"]
-        REVERT_COMMIT["Cofnięcie zmian dokonanych w wybranym commicie poprzez<br>stworzenie nowego commita, który będzie zawierał odwrócone zmiany<br><code>$ git revert commit_hash</code>"]
+        SPRAWDZ_WERSJE_GIT["Sprawdź wersję git<br><code>$ git --version</code>"]
+        PIERWSZA_KONFIGURACJA_GIT["Konfiguracja git po raz pierwszy, można dodać nick i mail<br><code>$ git config --global user.name Your_Name<br>$ git config --global user.email Your-Email<br>Zobacz wszystkie dostępne pola<br>$ git config --list</code>"]
+        INICJALIZACJA_LOKALNEGO_REPO["Inicjalizacja repozytorium<br>LOKALNIE w folderze tworzy folder .git<br><code>$ git init</code>"]
+        STWÓRZ_PLIK_.GITIGNORE["Stwórz plik .gitignore<br><code>$ touch .gitignore</code>"]
+        STWÓRZ_JAKIS_PLIK["Stworzenie pliku"]
+        DODAJ_PLIK_DO_STAGING_AREA["Dodanie pliku do staging area (jest śledzony)<br><code>$ git add nazwa_pliku #konkretny plik<br>$ git add . #wszystkie pliki w folderze</code>"]
+        SPRAWDZ_ZMIANY_W_REPO["Wyświetl jakie zmiany zostały wprowadzone<br>i czekają na commit w danym branchu<br><code>$ git status</code>"]    
+        ZMIANA_KODU["Wprowadzenie zmian w kodzie"]
+        COMMIT_ZMIAN_DO_LOKALNEGO_REPO["Commit zmian, z opisem commita, do obecnego brancha<br><code>$ git commit -m #quot;opis_commita#quot;</code>"]
+        POKAZ_COMMIT_HISTORY["Wyświetlenie historii<br/>commitów<br><code>$ git log</code>"]
+        COFNIJ_COMMIT["Cofnięcie zmian dokonanych w wybranym commicie poprzez<br>stworzenie nowego commita, który będzie zawierał odwrócone zmiany<br><code>$ git revert commit_hash</code>"]
         
-        CHECK_GIT --> FIRST_SETTING_GIT
-        FIRST_SETTING_GIT --> INITIALIZE_GIT_REPO
-        INITIALIZE_GIT_REPO --> FILE_CREATION
-        INITIALIZE_GIT_REPO --> CREATE_GITIGNORE
-        INITIALIZE_GIT_REPO --> CHECK_IF_FILES_ADDED_TO_TRACKING
-        INITIALIZE_GIT_REPO --> ADD_FILE_TO_STAGING_AREA
-        FILE_CREATION --> ADD_FILE_TO_STAGING_AREA
-        ADD_FILE_TO_STAGING_AREA --> CHECK_IF_FILES_ADDED_TO_TRACKING
-        CHECK_IF_FILES_ADDED_TO_TRACKING --> COMMIT_CHANGES_TO_LOCAL_REPO
-        FILE_CREATION --> CHANGES_IN_FILE
-        CHANGES_IN_FILE --> ADD_FILE_TO_STAGING_AREA
-        ADD_FILE_TO_STAGING_AREA --> COMMIT_CHANGES_TO_LOCAL_REPO 
-        COMMIT_CHANGES_TO_LOCAL_REPO --> PRINT_COMMIT_HISTORY
-        COMMIT_CHANGES_TO_LOCAL_REPO --> REVERT_COMMIT
+        SPRAWDZ_WERSJE_GIT --> PIERWSZA_KONFIGURACJA_GIT
+        PIERWSZA_KONFIGURACJA_GIT --> INICJALIZACJA_LOKALNEGO_REPO
+        INICJALIZACJA_LOKALNEGO_REPO --> STWÓRZ_JAKIS_PLIK
+        INICJALIZACJA_LOKALNEGO_REPO --> STWÓRZ_PLIK_.GITIGNORE
+        INICJALIZACJA_LOKALNEGO_REPO --> SPRAWDZ_ZMIANY_W_REPO
+        INICJALIZACJA_LOKALNEGO_REPO --> DODAJ_PLIK_DO_STAGING_AREA
+        STWÓRZ_JAKIS_PLIK --> DODAJ_PLIK_DO_STAGING_AREA
+        DODAJ_PLIK_DO_STAGING_AREA --> SPRAWDZ_ZMIANY_W_REPO
+        SPRAWDZ_ZMIANY_W_REPO --> COMMIT_ZMIAN_DO_LOKALNEGO_REPO
+        STWÓRZ_JAKIS_PLIK --> ZMIANA_KODU
+        ZMIANA_KODU --> DODAJ_PLIK_DO_STAGING_AREA
+        DODAJ_PLIK_DO_STAGING_AREA --> COMMIT_ZMIAN_DO_LOKALNEGO_REPO 
+        COMMIT_ZMIAN_DO_LOKALNEGO_REPO --> POKAZ_COMMIT_HISTORY
+        COMMIT_ZMIAN_DO_LOKALNEGO_REPO --> COFNIJ_COMMIT
 ```
 ## GITHUB
 ```mermaid
@@ -43,10 +43,10 @@ graph TB
         RENAME_MAIN --> PUSH_TO_GITHUB
         CREATE_GITHUB_REPO --> ADD_FILE_TO_REMOTE_REPO
 
-        COMMIT_CHANGES_TO_LOCAL_REPO --> PUSH_TO_GITHUB
+        COMMIT_ZMIAN_DO_LOKALNEGO_REPO --> PUSH_TO_GITHUB
 ```
-        CHANGES_IN_FILE --> CHECK_IF_FILES_ADDED_TO_TRACKING
-        CHECK_IF_FILES_ADDED_TO_TRACKING-->FILE_CREATION
+        ZMIANA_KODU --> SPRAWDZ_ZMIANY_W_REPO
+        SPRAWDZ_ZMIANY_W_REPO-->STWÓRZ_JAKIS_PLIK
 ---
 ## BRANCH
 ```mermaid
@@ -69,10 +69,10 @@ graph TB
         MERGE_BRANCHES --> DELETE_BRANCH
         LIST_ALL_BRANCHES --> CREATE_BRANCH_AND_SWITCH
         LIST_ALL_BRANCHES --> RENAME_BRANCH
-        CREATE_BRANCH_AND_SWITCH --> FILE_CREATION
-        CREATE_BRANCH_AND_SWITCH --> CHANGES_IN_FILE
-        SWITCH_BRANCH --> CHANGES_IN_FILE
-        SWITCH_BRANCH --> FILE_CREATION
+        CREATE_BRANCH_AND_SWITCH --> STWÓRZ_JAKIS_PLIK
+        CREATE_BRANCH_AND_SWITCH --> ZMIANA_KODU
+        SWITCH_BRANCH --> ZMIANA_KODU
+        SWITCH_BRANCH --> STWÓRZ_JAKIS_PLIK
 ```
     
 # BASIC WORKFLOW
