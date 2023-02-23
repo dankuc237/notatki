@@ -35,8 +35,8 @@ graph TB
         CREATE_GITHUB_REPO["Należy stworzyć repozytorium<br>na github.com, przez przeglądarkę, na github.com"]
         ADD_FILE_TO_REMOTE_REPO["Push istniejącego lokalnie repozytorium do github<br><code>$ git remote add origin https://github.com/GH_username/GH_reponame.git</code><br>- <code>git remote add</code> służy do dodania odnośnika do zdalnego repozytorium, którego nazwa jest <code>origin</code><br>- adres ten wskazuje na repozytorium na GitHubie,"]
         PUSH_TO_GITHUB["Przesyłanie zmian do repozytorium zdalnego<br><code>$ git push https://GITHUB_ACCESS_TOKEN@github.com/GITHUB_USERNAME/REPOSITORY_NAME.git</code><br>origin -domyślna adres URL zdalnego repozytorium,(skonfigurowany <code>git remote add</code>)<br>main -nazwa głównej gałęzi (ang. main branch) w repozytorium"]
-        UPDATE_LOCAL_REPOSITORY["Pobranie (synchronizacja) zmian z repozytorium zdalnego<br><code>$ git pull origin main</code>"]
         RENAME_MAIN["zmień nazwę głównego brancha na main<br><code>$ git branch -M main</code>"]
+        UPDATE_LOCAL_REPOSITORY["Pobranie (synchronizacja)<br>zmian z repozytorium zdalnego<br><code>$ git pull origin main</code>"]
 
         ADD_FILE_TO_REMOTE_REPO --> UPDATE_LOCAL_REPOSITORY
         ADD_FILE_TO_REMOTE_REPO --> RENAME_MAIN
