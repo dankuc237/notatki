@@ -14,6 +14,7 @@ graph TB
         POKAZ_COMMIT_HISTORY["Wyświetlenie historii<br/>commitów<br><code>$ git log</code>"]
         COFNIJ_COMMIT["Cofnięcie zmian dokonanych w wybranym commicie poprzez<br>stworzenie nowego commita, który będzie zawierał odwrócone zmiany<br><code>$ git revert commit_hash</code>"]
         
+        
         SPRAWDZ_WERSJE_GIT --> PIERWSZA_KONFIGURACJA_GIT
         PIERWSZA_KONFIGURACJA_GIT --> INICJALIZACJA_LOKALNEGO_REPO
         INICJALIZACJA_LOKALNEGO_REPO --> STWÓRZ_JAKIS_PLIK
