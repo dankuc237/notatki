@@ -68,7 +68,7 @@ graph TB
         CREATE_NEW_BRANCH["Tworzenie nowego brancha<br><code>$ git branch nazwa_nowego_brancha</code>"]
         CREATE_BRANCH_AND_SWITCH["Stwórz nowy branch na podstawie obecnego i przejdź do niego<br><code>$ git checkout -b nazwa_nowego_brancha</code><br>Stwórz nowy branch na podstawie existing_branch i przejdź do niego<br><code>$ git checkout -b new_branch existing_branch</code>"]
         SWITCH_BRANCH["Przełączanie na inny branch<br><code>$ git checkout nazwa_brancha</code><br>Przełączanie na główny branch<br><code>$ git checkout main</code>"]
-        PRINT_CHECKOUT_OPERATION_HISTORY["Historia checkout (skakania po branchach)<br><code>$ git reflog</code>"]
+        PRINT_CHECKOUT_OPERATION_HISTORY["Historia checkout (skakania po branchach)<br>i co się tam robiło (commity)<br><code>$ git reflog</code>"]
         MERGE_BRANCHES["Łączenie wybranego brancha z aktualnym<br>aktualny zostanie merge-receiving branch<br><code>$ git merge nazwa_brancha_z_którego_pobrać_commity</code>"]
         
         LIST_ALL_BRANCHES --> DELETE_BRANCH
