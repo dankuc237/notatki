@@ -1,4 +1,5 @@
 # FULL WORKFLOW
+Git Tutorial For Dummies https://www.youtube.com/watch?v=mJ-qvsxPHpY)
 ## BASIC WORKFLOW
 ```mermaid
 graph TB
@@ -43,7 +44,7 @@ graph TB
 graph TB
         STWORZ_REPO_NA_GH["Należy stworzyć repozytorium<br>na github.com, przez przeglądarkę, na github.com"]
         POWIAZ_LOKALNE_I_ZDALNE_REPO["Powiązanie lokalnego repo ze zdalnym<br><code>$ git remote add origin https://github.com/GH_username/GH_reponame.git</code><br><code>git remote add</code> służy do dodania odnośnika do zdalnego repozytorium, którego nazwa jest <code>origin</code><br>Mapój słowo <code>origin</code> na adres zdalnego repozytorium"]
-        PUSH_DO_GITHUB["Przesyłanie zmian do repozytorium zdalnego<br><code>$ git push https://GITHUB_ACCESS_TOKEN@github.com/GITHUB_USERNAME/REPOSITORY_NAME.git</code><br><code>-u</code> -zapamiętaj ustawinia - później wystarczy tylko napiać <code>$ git push<code><br>Push wszystkich zrobionych commitów<br>(na danym branchu) do repo (na branch na którym się aktualnie jest)"]
+        PUSH_DO_GITHUB["Przesyłanie zmian do repozytorium zdalnego<br><code>$ git push https://GH_ACCESS_TOKEN@github.com/GH_USERNAME/REPO_NAME.git</code><br><code>-u</code> -zapamiętaj ustawinia - później wystarczy tylko napiać <code>$ git push<code><br>Push wszystkich zrobionych commitów<br>(na danym branchu) do repo (na branch na którym się aktualnie jest)"]
         ZMIEN_NAZWE_BRANCH_NA_MAIN["zmień nazwę głównego brancha na main<br><code>$ git branch -M main</code>"]
         UPDATE_LOKALNEGO_REPO_Z_GH["Pobranie (synchronizacja)<br>zmian z repozytorium zdalnego<br><code>$ git pull origin main</code><br><code>git pull</code> -Co zrobić<br><code>origin<code> -skąd<br><code>main</code> -który branch"]
         KONFLIKT
