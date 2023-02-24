@@ -10,29 +10,32 @@ graph TB
         STWÓRZ_PLIK_.GITIGNORE["Stwórz plik .gitignore<br><code>$ touch .gitignore</code>"]
         DODAJ_PLIK_DO_STAGING_AREA["Dodanie pliku do staging area (jest śledzony)<br><code>$ git add nazwa_pliku #konkretny plik<br>$ git add . #wszystkie pliki w folderze</code>"]
         ZMIANA_KODU["Wprowadzenie zmian w kodzie"]
-        UNSTAGE_PLIKU["Usunięcie pliku ze staging area<br><code>git restore --staged &lt;file&gt;</code>"]
+        UNSTAGE_PLIKU["Usunięcie pliku ze staging area<br><code>git restore --staged file</code>"]
         COMMIT_ZMIAN_DO_LOKALNEGO_REPO["Commit zmian, z opisem commita, do obecnego brancha<br><code>$ git commit -m #quot;opis_commita#quot;</code>"]
         POKAZ_COMMIT_HISTORY["Wyświetlenie historii<br/>commitów<br><code>$ git log</code>"]
         COFNIJ_COMMIT["Cofnięcie zmian dokonanych w wybranym commicie poprzez<br>stworzenie nowego commita, który będzie zawierał odwrócone zmiany<br><code>$ git revert commit_hash</code>"]
+        WROC_DO_POPSZEDNIEGO_STANU["<br><code>$ git checkou commit_number<code>"]
 
         SPRAWDZ_WERSJE_GIT --> PIERWSZA_KONFIGURACJA_GIT
         PIERWSZA_KONFIGURACJA_GIT --> INICJALIZACJA_LOKALNEGO_REPO
         INICJALIZACJA_LOKALNEGO_REPO --> SPRAWDZ_ZMIANY_W_REPO
         INICJALIZACJA_LOKALNEGO_REPO --> STWÓRZ_JAKIS_PLIK
         INICJALIZACJA_LOKALNEGO_REPO --> DODAJ_PLIK_DO_STAGING_AREA
-        STWÓRZ_JAKIS_PLIK --> STWÓRZ_PLIK_.GITIGNORE
         STWÓRZ_JAKIS_PLIK --> ZMIANA_KODU
         STWÓRZ_JAKIS_PLIK --> DODAJ_PLIK_DO_STAGING_AREA
-        SPRAWDZ_ZMIANY_W_REPO --> DODAJ_PLIK_DO_STAGING_AREA
-        SPRAWDZ_ZMIANY_W_REPO --> COMMIT_ZMIAN_DO_LOKALNEGO_REPO
+        STWÓRZ_JAKIS_PLIK --> STWÓRZ_PLIK_.GITIGNORE
         SPRAWDZ_ZMIANY_W_REPO --> UNSTAGE_PLIKU
+        SPRAWDZ_ZMIANY_W_REPO --> COMMIT_ZMIAN_DO_LOKALNEGO_REPO
+        SPRAWDZ_ZMIANY_W_REPO --> DODAJ_PLIK_DO_STAGING_AREA
         ZMIANA_KODU --> DODAJ_PLIK_DO_STAGING_AREA
         DODAJ_PLIK_DO_STAGING_AREA --> COMMIT_ZMIAN_DO_LOKALNEGO_REPO 
         DODAJ_PLIK_DO_STAGING_AREA --> UNSTAGE_PLIKU
         COMMIT_ZMIAN_DO_LOKALNEGO_REPO --> POKAZ_COMMIT_HISTORY
+        POKAZ_COMMIT_HISTORY --> WROC_DO_POPSZEDNIEGO_STANU
         COMMIT_ZMIAN_DO_LOKALNEGO_REPO --> COFNIJ_COMMIT
         STWÓRZ_JAKIS_PLIK --> SPRAWDZ_ZMIANY_W_REPO
         ZMIANA_KODU --> SPRAWDZ_ZMIANY_W_REPO
+        WROC_DO_POPSZEDNIEGO_STANU --> SPRAWDZ_ZMIANY_W_REPO
 
 ```
 ## GITHUB
