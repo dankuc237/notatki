@@ -44,6 +44,7 @@ graph TB
         ZMIEN_NAZWE_BRANCH_NA_MAIN["zmień nazwę głównego brancha na main<br><code>$ git branch -M main</code>"]
         UPDATE_LOKALNEGO_REPO_Z_GH["Pobranie (synchronizacja)<br>zmian z repozytorium zdalnego<br><code>$ git pull origin main</code><br><code>git pull</code> -Co zrobić<br><code>origin<code> -skąd<br><code>main</code> -który branch"]
         KONFLIKT
+        KONFLIKT_RESOLVE["Manulanie zmień plik<br>zawierający konflikt"]
 
         POWIAZ_LOKALNE_I_ZDALNE_REPO --> UPDATE_LOKALNEGO_REPO_Z_GH
         POWIAZ_LOKALNE_I_ZDALNE_REPO --> ZMIEN_NAZWE_BRANCH_NA_MAIN
@@ -52,9 +53,9 @@ graph TB
         COMMIT_ZMIAN_DO_LOKALNEGO_REPO --> PUSH_DO_GITHUB
         PUSH_DO_GITHUB --> KONFLIKT
         UPDATE_LOKALNEGO_REPO_Z_GH --> KONFLIKT
-        KONFLIKT--> Manulanie_zmień_plik
+        KONFLIKT--> KONFLIKT_RESOLVE
         DODAJ_PLIK_DO_STAGING_AREA --> COMMIT_ZMIAN_DO_LOKALNEGO_REPO
-        Manulanie_zmień_plik --> DODAJ_PLIK_DO_STAGING_AREA
+        KONFLIKT_RESOLVE --> DODAJ_PLIK_DO_STAGING_AREA
 
 ```
 ---
@@ -70,16 +71,16 @@ graph TB
         PRINT_CHECKOUT_OPERATION_HISTORY["Historia checkout (skakania po branchach)<br>i co się tam robiło (commity)<br><code>$ git reflog</code>"]
         MERGE_BRANCHES["Łączenie wybranego brancha z aktualnym<br>aktualny zostanie merge-receiving branch<br><code>$ git merge nazwa_brancha_z_którego_pobrać_commity</code>"]
         
-        LIST_ALL_BRANCHES --> DELETE_BRANCH
         LIST_ALL_BRANCHES --> CREATE_NEW_BRANCH
+        LIST_ALL_BRANCHES --> SWITCH_BRANCH
+        LIST_ALL_BRANCHES --> CREATE_BRANCH_AND_SWITCH
+        LIST_ALL_BRANCHES --> DELETE_BRANCH
+        LIST_ALL_BRANCHES --> RENAME_BRANCH
         CREATE_NEW_BRANCH --> SWITCH_BRANCH
         SWITCH_BRANCH --> PRINT_CHECKOUT_OPERATION_HISTORY
-        LIST_ALL_BRANCHES --> SWITCH_BRANCH
         SWITCH_BRANCH --> MERGE_BRANCHES
         MERGE_BRANCHES --> DELETE_BRANCH
         MERGE_BRANCHES --> KONFLIKT
-        LIST_ALL_BRANCHES --> CREATE_BRANCH_AND_SWITCH
-        LIST_ALL_BRANCHES --> RENAME_BRANCH
         CREATE_BRANCH_AND_SWITCH --> STWÓRZ_JAKIS_PLIK
         CREATE_BRANCH_AND_SWITCH --> ZMIANA_KODU
         SWITCH_BRANCH --> ZMIANA_KODU
