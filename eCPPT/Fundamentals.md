@@ -9,11 +9,3 @@ EIP (x86) - rejest, Instruction Pointer, wherer next instruction is
 
 Lower memory addresses
 
-|||
-|-|-|
-|instructions|.text|
-|initialized variables|.data|
-|uninitialized variables|BSS|
-|Heap||
-|Stack||
-Higher Memory addresses
