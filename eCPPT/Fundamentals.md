@@ -14,8 +14,12 @@ General Purpose Registers (GPRs)
 
 # ASLR (Address space layout randomization)
 [Address space layout randomization](https://en.wikipedia.org/wiki/Address_space_layout_randomization)
-# DEP (Data Execution Prevention)
+## Bypas
+### Bruteforce
+### NOP-Sled
 
+# DEP (Data Execution Prevention)
+celem jest uniemożliwienie wykonywania kodu z segmentu danych. Pomaga to w ochronie przed exploitami wykorzystującymi przepełnienie bufora.
 # useful registers in assembly 
 Rxx - 64-bit Registers - 
 Exx - 32-bit Registers: 
@@ -50,6 +54,9 @@ mona plugin - https://github.com/corelan/mona
 
 !mona jmp -r esp 
 # -r register we want to target
+
+!mona modules # sprawdź ASLR status
+!mona noaslr # pokaż moduły bez włączonego ASLR 
 ```
 ## IDA Pro
 ## Metasploit
@@ -57,6 +64,10 @@ pattern_create
 	./pattern_create.rb 100
 pattern_offset
 	./pattern_offset.rb 22
+## EMET
+## Proces Explorer
+https://learn.microsoft.com/pl-pl/sysinternals/downloads/process-explorer
+
 # Real world BOF
 python listener 
 
