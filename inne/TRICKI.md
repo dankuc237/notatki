@@ -459,5 +459,9 @@ strace -p <PID SSHD> -f -o outfile.txt
 cat out.txt| grep "<... read resumed>" # szukać w tym
 
 ```
+# Creating a Linux service with systemd
 
+https://medium.com/@benmorel/creating-a-linux-service-with-systemd-611b5c8b91d6
 
+# How to Bypass Windows Passwords using Kali Linux
+https://systemweakness.com/how-to-bypass-windows-passwords-using-kali-linux-d76be51e8481

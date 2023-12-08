@@ -110,6 +110,7 @@ do
 done
 ```
 
+[Read a file line by line assigning the value to a variable](https://forum.xfce.org/viewtopic.php?id=8619)
 ```bash
 while read p;
 do
@@ -145,6 +146,14 @@ function nazwa_funkcji(){
 	#code
 }
 ```
+# File Descriptors / redirections
+https://tldp.org/LDP/abs/html/io-redirection.html
+https://riptutorial.com/bash/topic/399/redirection
+https://stackoverflow.com/questions/66080381/how-to-use-a-different-file-descriptor-in-a-shell-pipeline
+https://stackoverflow.com/questions/7082001/how-do-file-descriptors-work
+
+## Named Pipes
+https://riptutorial.com/bash/example/14181/using-named-pipes
 # find
 ```bash
 find /(gdzie) -type f ...(jakie właściwości)
