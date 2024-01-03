@@ -86,6 +86,8 @@ sequenceDiagram
 	Note over S, C: Cały ruch od teraz szyfrowany jest za pomocą klucza symetrycznego
 ```
 
+![[Pasted image 20240103095805.png]]
+
 # Digital Signature (Cyfrowy Podpis)
 
 https://www.youtube.com/watch?v=TmA2QWSLSPg
@@ -115,6 +117,7 @@ sequenceDiagram
 	Note over Alice: Alice sprawdza integralność wiadomości:<br>generuje skrót otrzymanej wiadomości<br>porównuje wygenerowany hash<br>z otrzymanym po odszyfrowaniu
 ```
 
+![[Pasted image 20240103095927.png]]
 ## Atak MitM
 
 ```mermaid
@@ -142,7 +145,7 @@ W ataku MitM, atakujący może udawać zarówno nadawcę, jak i odbiorcę. Ataku
 
 https://www.youtube.com/watch?v=UbMlPIgzTxc  
 https://help.webex.com/pl-pl/article/WBX42278/Czym-jest-certyfikat-cyfrowy-X.509
-
+Creating a rogue CA certificate - http://www.win.tue.nl/hashclash/rogue-ca/
 Certyfikaty cyfrowe (Digital Certificates) to elektroniczne dane uwierzytelniające:
 
 - wydawane przez zaufaną trzecią stronę
@@ -175,3 +178,4 @@ sequenceDiagram
 	Note over Alice: Alice sprawdza integralność wiadomości<br>generuje skrót otrzymanej wiadomości<br>porównuje wygenerowany hash<br>z otrzymanym po odszyfrowaniu
 ```
 
+![[Pasted image 20240103095619.png]]
