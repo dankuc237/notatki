@@ -368,7 +368,8 @@ root@root: chntpw -u Workgroup SAM # Select the user whose password you want to 
 **BYPASS LOGIN**
 [Kon-Boot](http://www.piotrbania.com/all/kon-boot/) is a software which allows to change contents of a Linux and Windows kernel on the fly (while booting). It allows to log into a system as 'root' user without typing the correct password or to elevate privileges from current user to root. It allows to enter any password protected profile without any knowledge of the password.
 
-# Malware definitions
+# Malware
+## Definitions
 * **Malware** - software written to cause damage or infiltrate computer systems without the owner's informed consent. It is a general term used to represent various forms of intrusive, hostile and/or annoying code.
 * **Virus** - ﻿computer program that copies itself and spreads without the permission or knowledge of the owner. Viruses do not spread via exploiting vulnerabilities (the ones that do that are called worms).
 * **Trojan horse** (or simply trojan) is a kind of malware that appears to the user to perform a function, but in-fact facilitates unauthorized access to the owner's system. They are not self-replicating unlike viruses.
@@ -382,3 +383,85 @@ root@root: chntpw -u Workgroup SAM # Select the user whose password you want to 
 * ﻿**Botnet** refers to a collection of compromised computers which run commands automatically and autonomously (with the help of command and control server).
 * **Ransomware** ﻿is a software which locks down important files with a password and then demands from the user to send money and in return promises to unlock files.
 * ﻿**Worms** are basically software which use network/system vulnerabilities to spread themselves from system to system. They are typically part of other software such as rootkit and are normally the entry point into the system.
+## Techniques
+The most important covert methods are:
+### Streams (ADS)
+Streams are a feature of NTFS file system, they are not available on FAT file systems.
+Microsoft calls them Alternate Data Stream.
+The original data stream is file data itself(it is the data stream with no name), all other streams have a name. Alternate data streams can be used to store file meta data/or any other data.
+
+Type the following command in the command prompt:
+```bash
+echo This data is hidden in the stream. Can you Read IT ??? >> sample.txt:hstream
+
+# retrieve back your data:
+more < sample.txt:hstream
+```
+﻿
+### Hooking native Apis / SSDT
+SSDT stands for System Service Descriptor Table. 
+Native API is API which resides in ntdll.dll and is basically used to communicate with kernel mode.
+
+1. Hook SSDT table entry corresponding to NtQueryDirectoryFile
+2. Now, whenever the above function is called, your function will be called
+3. Right after your function gets called, call original function and get its result (directory listing)
+4. If the result was successful, modify the results (hide the file/sub-directory you want to hide)
+5. Now pass back the results to the caller
+6. You are hidden
+
+### Hooking IRP
+Windows architecture in kernel mode introduced the concepts of IRPs (I/O Request Packets) to transmit piece of data from one component to another. The concept of IRPs is well explained in the Windows Driver Development Kit (it is available for free). ﻿
+Almost everything in the windows kernel use IRPs for example network interface (TCP/UDP, etc.), file system, keyboard and mouse, and almost all existent drivers.
+
+There are basically 2 ways to play with IRPs:
+* Become A Filter Driver:- Register with the operating system as a filter driver or an attached device.
+* Hooking The Function Pointer: in the previous snippet, the array is just a table with function pointers and can be easily modified
+### Hiding Process
+E.g., first thing you have to do is to hook NtOpenProcess native API (probably using SSDT table hooks).
+Please refer to earlier segments of this chapter to know more about SSDT hooking.
+### API Hooking
+* **IAT hooking** stands for Import Address Table. It is basically used to resolve runtime dependencies.
+For example, when you use MessageBoxA API in windows, your compiler automatically links to user32.dll.
+This makes your program dependent on user32.dll.
+
+* ﻿**EAT hooking** stands for Export Address Table. This table is maintained in DLLs (dynamic link library).
+These files just contain support functions for other executable files.
+
+
+The difference between IAT and EAT hooking is:
+Since EATs exist only in DLL files (under normal settings) most of the times EAT hooking is utilized only on DLLs while IAT hooking can be done on both EXEs and DLLs.
+
+
+* **Inline Hooking** is the most difficult to do due to the way it works.
+In this form of hooking, we modify the first few bytes of the target function code and replace them with our code which tells the IP (instruction pointer) to execute code somewhere else in memory. Whenever the function gets executed, we will get control of execution; after doing our job, we have to call the original function so we have to fix up the modified function.
+This is normally done by executing a number of instructions which were replaced and then resuming execution in non-modified original function code.
+### Anti-Debugging Methods
+There are several methods which are used by malware to increase the time required to analyze the code (by security analysts). If such techniques are not already known by security analysts, then the time required increases drastically.
+### Anti-Virtual Machine
+
+Virtual Machine let you install a virtual OS side-by side your OS (without disturbing your OS) and will run just like any other normal program. These techniques are basically used by security analysts, so malware authors have found out few bugs in these applications which can be used to detect whether the OS is virtualized or not.
+The techniques basically work on the SIDT instruction, which returns the IDT table address.
+On real machines, it is in low memory less than 0xd0 while for virtualized OS (VMware/Virtual Pc ), it is higher than that.
+This abnormal behavior leads to detection whether the malware is running on a real or virtualized system or not.
+### Obfuscation
+Code obfuscation techniques transform/change a program in order to make it more difficult to analyze while preserving functionality. Code obfuscation is used both by malware and legal software to protect itself. The difference is that malware use it to either prevent detection or make reverse engineering more difficult.
+
+### Packers
+Packers are software which compress the executable. They were initially designed to decrease the size of executable files. However, the malware authors recognized very quickly that decreasing file size will decrease number of patterns in the file, so less chances of detection by anti-virus.
+
+Packer facts:
+* Packers allow to compress/encrypt applications.
+* You cannot see the code of the application using a disassembler, you need to unpack it first.
+* Packers compress applications and add a small loader to the file.
+* The loader will decompress the binary in memory, resolve imports, and call the Original Entry Point (OEP).
+### Polymorphism
+Polymorphic code aims at performing a given action (or algorithm) through code that mutates and changes every time the action has to be taken. The mutation makes them very difficult to detect.
+There have been only a few polymorphic viruses and they still are not detected 100% by most of the anti-viruses. All polymorphic viruses have a constant encoding and variable decryptor. So a virus using a different XOR key to encrypt its variant also falls into polymorphic category.
+### Metamorphism
+It can be best defined as polymorphism with polymorphism applied to the decryptor/header as well.
+There are numerous ways to implement metamorphism/polymorphism (both are similar with some minor differences). Some of which are documented below:
+* Garbage Insertion
+* Register Exchange
+* Permutation of Code Blocks
+* Insertion of Jump Instructions Instruction Substitution
+* Code Integration with Host
