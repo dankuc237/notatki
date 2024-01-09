@@ -59,6 +59,7 @@ kończy wykonanie procedury i nakazuje powrót do program wywołującego
 [Address space layout randomization](https://en.wikipedia.org/wiki/Address_space_layout_randomization)
 
 ## Bypas
+https://www.corelan.be/index.php/2011/07/03/universal-depaslr-bypass-with-msvcr71-dll-and-mona-py/
 
 ### Bruteforce
 
