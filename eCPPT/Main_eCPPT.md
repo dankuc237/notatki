@@ -466,3 +466,8 @@ There are numerous ways to implement metamorphism/polymorphism (both are similar
 * Permutation of Code Blocks
 * Insertion of Jump Instructions Instruction Substitution
 * Code Integration with Host
+# Firewall/IDS Evasion
+## Fragmentation
+## Decoys
+## Timing
+## Source ports
