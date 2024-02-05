@@ -1,21 +1,24 @@
 {
   "main": {
-    "id": "69590b20587582e8",
+    "id": "19c25d37222799bc",
     "type": "split",
     "children": [
       {
-        "id": "4cabf1574171dc8c",
+        "id": "bfde9e2a05b0c61a",
         "type": "tabs",
         "children": [
           {
-            "id": "f6dbdd0c1041617e",
+            "id": "0fcb3c5ddcbfabf3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "PenTest/Scanning_&_Enumeration/Services.md",
-                "mode": "source",
-                "source": false
+                "file": "mindmapa/6. Post.canvas",
+                "viewState": {
+                  "x": 4175,
+                  "y": -3017.5,
+                  "zoom": -0.8172666063628081
+                }
               }
             }
           }
@@ -25,15 +28,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "acc7f732892f78b8",
+    "id": "a9639c5d41154759",
     "type": "split",
     "children": [
       {
-        "id": "007329b56803c45d",
+        "id": "d7989f411481e9ae",
         "type": "tabs",
         "children": [
           {
-            "id": "ac261d233e40a019",
+            "id": "391edd8c99bb559e",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +46,7 @@
             }
           },
           {
-            "id": "fe0e17bba4d33202",
+            "id": "cb53225f8779e2f7",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +61,7 @@
             }
           },
           {
-            "id": "766ffb44f29e0722",
+            "id": "7f5605c10f9f84f0",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -69,23 +72,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 329.5
   },
   "right": {
-    "id": "4e0229c98c8e732d",
+    "id": "69d1cfcac9f0122c",
     "type": "split",
     "children": [
       {
-        "id": "713d901a0697bd17",
+        "id": "6cc9693bc0a3c738",
         "type": "tabs",
         "children": [
           {
-            "id": "3817ef8fc16d3a86",
+            "id": "43ca962fa0b22e65",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PenTest/Scanning_&_Enumeration/Services.md",
+                "file": "mindmapa/4. File transfer.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +100,19 @@
             }
           },
           {
-            "id": "3ed08bf77df06a30",
+            "id": "d2b60f890beb9410",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PenTest/Scanning_&_Enumeration/Services.md",
+                "file": "mindmapa/4. File transfer.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "a9914ca39796b933",
+            "id": "1c7755abf4e355b8",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,20 +123,22 @@
             }
           },
           {
-            "id": "9a9d60b36d027bdc",
+            "id": "dc8969ad004087e2",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "PenTest/Scanning_&_Enumeration/Services.md"
+                "file": "mindmapa/4. File transfer.canvas"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -145,8 +150,238 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f6dbdd0c1041617e",
+  "floating": {
+    "id": "ee74d89e9ebb8125",
+    "type": "floating",
+    "children": [
+      {
+        "id": "0bb942ca7053d2a5",
+        "type": "window",
+        "children": [
+          {
+            "id": "8e29af1bfbdc738d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "92edf6daabf2bb24",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "mindmapa/0. Reconnaissance.canvas",
+                    "viewState": {
+                      "x": 538,
+                      "y": 903,
+                      "zoom": -1.4069740845834193
+                    }
+                  }
+                }
+              },
+              {
+                "id": "987d3f89d382d561",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "mindmapa/1. Host Discovery.canvas",
+                    "viewState": {
+                      "x": -180,
+                      "y": 325,
+                      "zoom": -1.0179054314462959
+                    }
+                  }
+                }
+              },
+              {
+                "id": "ab343adc7cf8c022",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "mindmapa/2. Services.canvas",
+                    "viewState": {
+                      "x": -55.25824648249926,
+                      "y": 3886.521663045931,
+                      "zoom": -0.3333333333333334
+                    }
+                  }
+                }
+              },
+              {
+                "id": "83e95cc114980aa9",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "mindmapa/2.5. Attacks.canvas",
+                    "viewState": {
+                      "x": -2823.995921925749,
+                      "y": 44.47598935060523,
+                      "zoom": -1
+                    }
+                  }
+                }
+              },
+              {
+                "id": "080aa1244448ccce",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "mindmapa/3. Gaining Acces.canvas",
+                    "viewState": {
+                      "x": -1600,
+                      "y": -200,
+                      "zoom": -0.6069888070511553
+                    }
+                  }
+                }
+              },
+              {
+                "id": "07636c5904dba71a",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "mindmapa/4. File transfer.canvas",
+                    "viewState": {
+                      "x": 663.9999999999995,
+                      "y": 1243.9999999999998,
+                      "zoom": -1.9999999999999998
+                    }
+                  }
+                }
+              },
+              {
+                "id": "63bba7cb86668fb0",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "mindmapa/5. Pivoting.canvas",
+                    "viewState": {
+                      "x": -314.6872495205344,
+                      "y": -292.3068010350736,
+                      "zoom": -0.5972571935978217
+                    }
+                  }
+                }
+              },
+              {
+                "id": "2f30f00decc14b2e",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "mindmapa/6. Post.canvas",
+                    "viewState": {
+                      "x": 13426.840384847741,
+                      "y": -5174.83869882777,
+                      "zoom": 3.3306690738754696e-16
+                    }
+                  }
+                }
+              },
+              {
+                "id": "70275893657cebaa",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "mindmapa/protocols/Protocols.canvas",
+                    "viewState": {
+                      "x": -1023.4217559292601,
+                      "y": 443.01312447594944,
+                      "zoom": -1.6666666666666665
+                    }
+                  }
+                }
+              },
+              {
+                "id": "9a0d4e0bccf2f82c",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "LAB ICMP Redirect attack.canvas",
+                    "viewState": {
+                      "x": 1410,
+                      "y": 135,
+                      "zoom": -1.060760910408093
+                    }
+                  }
+                }
+              }
+            ],
+            "currentTab": 5
+          }
+        ],
+        "direction": "vertical",
+        "x": 1579,
+        "y": 515,
+        "width": 768,
+        "height": 786,
+        "maximize": true,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "07636c5904dba71a",
   "lastOpenFiles": [
-    "PenTest/Main.md"
+    "mindmapa/2. Services.canvas",
+    "mindmapa/6. Post.canvas",
+    "mindmapa/tools/cadaver",
+    "mindmapa/tools/cadaver/WebDAV.md",
+    "mindmapa/4. File transfer.canvas",
+    "mindmapa/tools/Metasploit/msf_pivoting.md",
+    "mindmapa/3. Gaining Acces.canvas",
+    "mindmapa/2.5. Attacks.canvas",
+    "mindmapa/5. Pivoting.canvas",
+    "notatki/PenTest/C2/Metasploit.md",
+    "mindmapa/tools/powershell-empire",
+    "notatki/PenTest/Post-Exploitation/Windows_Credential_Dumping.md",
+    "mindmapa/tools/xfreerdp/xfreerdp_passthehash.md",
+    "notatki/inne/BASH.md",
+    "mindmapa/protocols/LM_NTLM_NTLMv2.md",
+    "LAB ICMP Redirect attack.canvas",
+    "mindmapa/protocols/NetBIOS.md",
+    "mindmapa/protocols/Protocols.canvas",
+    "mindmapa/NetBIOS.md",
+    "mindmapa/LM_NTLM_NTLMv2.md",
+    "mindmapa/7. Social Engineering.canvas",
+    "mindmapa/tools/crackmapexec/crackmapexec_smb.md",
+    "notatki/PenTest/Tools/crackmapexec.md",
+    "mindmapa/tools/ssh/ssh_port_forwarding.md",
+    "mindmapa/tools/ssh/Untitled.md",
+    "notatki/PenTest/Tools/(reverse) shell.md",
+    "mindmapa/tools/ssh/sshfs.md",
+    "mindmapa/tools/ssh/scp.md",
+    "notatki/PenTest/Tools/responder.md",
+    "notatki/PenTest/Tools/podman.md",
+    "notatki/PenTest/Tools/mimikatz.md",
+    "notatki/PenTest/Tools/(reverse) shell 1.md",
+    "notatki/PenTest/Initial_Access/Deploying_Payload.md",
+    "notatki/PenTest/Post-Exploitation/Linux_Local_Enumeration_And_Privilege_Escalation.md",
+    "notatki/PenTest/Post-Exploitation/Linux_Persistence.md",
+    "notatki/PenTest/Materials/Materials.md",
+    "mindmapa/0. Reconnaissance.canvas",
+    "mindmapa/tools/ssh",
+    "Pasted image 20240125112212.png",
+    "mindmapa/protocols",
+    "mindmapa/tools/netcat",
+    "mindmapa/tools/snmpwalk",
+    "mindmapa/tools/hydra",
+    "mindmapa/tools/xfreerdp",
+    "mindmapa/tools/crackmapexec",
+    "mindmapa/tools/nmap",
+    "mindmapa/Pentest.png",
+    "notatki/inne/piping.png",
+    "notatki/inne/input-output.png",
+    "Pasted image 20240104110707.png",
+    "Pasted image 20240103114842.png",
+    "notatki/eCPPT/images/Pasted image 20240103113009.png",
+    "notatki/eCPPT/images/Pasted image 20240103105412.png",
+    "notatki/eCPPT/images/Pasted image 20240103105552.png",
+    "notatki/eCPPT/images/Pasted image 20240103105435.png"
   ]
 }

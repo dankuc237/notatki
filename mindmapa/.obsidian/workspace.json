@@ -1,0 +1,222 @@
+{
+  "main": {
+    "id": "b0bee1aac95b9d8b",
+    "type": "split",
+    "children": [
+      {
+        "id": "517b33770af149c1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bd809c78fdb3c726",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "0. Reconnaissance.canvas",
+                "viewState": {
+                  "x": 538,
+                  "y": 903,
+                  "zoom": -1.4069740845834193
+                }
+              }
+            }
+          },
+          {
+            "id": "15cd257d86c60d27",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "1. Host Discovery.canvas",
+                "viewState": {
+                  "x": -180,
+                  "y": 325,
+                  "zoom": -1.0179054314462959
+                }
+              }
+            }
+          },
+          {
+            "id": "aa894bfba7e70dca",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "2. Services.canvas",
+                "viewState": {
+                  "x": -870,
+                  "y": 5990,
+                  "zoom": -3.314971465854881
+                }
+              }
+            }
+          },
+          {
+            "id": "6840d2024feaa484",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "3. Gaining Acces.canvas",
+                "viewState": {
+                  "x": -580,
+                  "y": -1080,
+                  "zoom": -1.4687436521529869
+                }
+              }
+            }
+          },
+          {
+            "id": "d2623cf17ee93cee",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "4. File transfer.canvas",
+                "viewState": {
+                  "x": -746.9180660213863,
+                  "y": 1619.4550659445626,
+                  "zoom": -1.2774183996756505
+                }
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5886aabfc5b1abe3",
+    "type": "split",
+    "children": [
+      {
+        "id": "b34578cec4944a84",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3c098082668717b4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "aa82590d1b19da19",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0547394d15bdea76",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "54e4b8fa599072b8",
+    "type": "split",
+    "children": [
+      {
+        "id": "69ec7135e9c7dec3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "853bd88cbeef6e65",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "tools/nmap/nmap_host_discovery.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a8334cc722afb496",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "tools/nmap/nmap_host_discovery.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "97296b6684953974",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "6ed22bfb8f4875db",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "tools/nmap/nmap_host_discovery.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "15cd257d86c60d27",
+  "lastOpenFiles": [
+    "2. Services.canvas",
+    "1. Host Discovery.canvas",
+    "0. Reconnaissance.canvas",
+    "4. File transfer.canvas",
+    "3. Gaining Acces.canvas",
+    "Pentest.canvas"
+  ]
+}

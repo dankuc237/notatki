@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"77376c3ce558868f","type":"group","x":-2080,"y":-960,"width":960,"height":1240,"label":"DIY exploit"},
+		{"id":"ef711d5682a02f2e","type":"file","file":"mindmapa/tools/Metasploit/msf_msfvenom.md","x":-2060,"y":-650,"width":920,"height":900},
+		{"id":"3b977b26b8cff939","type":"text","text":"# $ backdor factory\nhttps://www.kali.org/tools/backdoor-factory/\nhttps://www.youtube.com/watch?v=BMj3ves5DUw\nhttps://github.com/secretsquirrel/the-backdoor-factory","x":-1580,"y":-940,"width":440,"height":220},
+		{"id":"10b133bf46fb2e1f","type":"text","text":"## $ Villain\n[[Villain]]","x":-2060,"y":-940,"width":460,"height":220},
+		{"id":"aa7e1d61aa91d193","type":"text","text":"EXPLOITS","x":-840,"y":-1160,"width":250,"height":60},
+		{"id":"0319be1696b32049","type":"text","text":"# wyszukiwarki CVE\nhttps://www.cve.org/  \nhttps://nvd.nist.gov/vuln/full-listing\nhttps://vulners.com/\n\n# Lista exploitów dla poszczególnych CVE i innych:  \nhttps://www.exploit-db.com/\n\n# Lista PoC na GH dla każdego CVE:  \nhttps://github.com/nomi-sec/PoC-in-GitHub\n\n# gdzie szukać exploitów (przydate strony)\n1. https://packetstormsecurity.com/\n2. Searchsploit - https://www.exploit-db.com/\n3. https://gitlab.com/exploit-database/exploitdb-bin-sploits\n4. https://www.rapid7.com/db/\n5. https://github.com/nomi-sec/PoC-in-GitHub","x":-240,"y":-960,"width":680,"height":620},
+		{"id":"0760a9f253c00a17","type":"text","text":"GAINING ACCES","x":-1102,"y":-1414,"width":250,"height":60,"color":"1"},
+		{"id":"38d12beedad1f3e1","type":"text","text":"# Hash type identification\n```bash\n$ hashid -j # hash type for JtR\n$P$BGrGrgf2wToBS79i07Rk9sN4Fzk.TV.\nAnalyzing '$P$BGrGrgf2wToBS79i07Rk9sN4Fzk.TV.'\n[+] Wordpress ≥ v2.6.2 [JtR Format: phpass]\n","x":-901,"y":-2320,"width":558,"height":240},
+		{"id":"8428c4b9e68714d9","type":"text","text":"DICT ATTACK","x":-811,"y":-1720,"width":250,"height":60},
+		{"id":"6fafad7cf6cbd5e6","type":"text","text":"# $ john\n```bash\n$ john <hash_file> --wordlist=<wordlist_file> --format=<format(hashid)> # crack hash \n```\n```bash\n$ john --show password_hash.txt # display cracked passwords\n```","x":-181,"y":-2120,"width":880,"height":240},
+		{"id":"02199aac352aab38","type":"text","text":"# $ crunch","x":-181,"y":-1840,"width":333,"height":88},
+		{"id":"37d2be857da55ab3","type":"text","text":"https://book.hacktricks.xyz/generic-methodologies-and-resources/brute-force","x":-240,"y":-1611,"width":779,"height":51}
+	],
+	"edges":[
+		{"id":"72f8fdbd7eab706c","fromNode":"aa7e1d61aa91d193","fromSide":"left","toNode":"77376c3ce558868f","toSide":"right","label":"make exploit"},
+		{"id":"0aa8107d40463184","fromNode":"aa7e1d61aa91d193","fromSide":"right","toNode":"0319be1696b32049","toSide":"left","label":"search for exploit"},
+		{"id":"0745deb7c8a9f54c","fromNode":"0760a9f253c00a17","fromSide":"bottom","toNode":"aa7e1d61aa91d193","toSide":"top"},
+		{"id":"e95540581ef96fb5","fromNode":"0760a9f253c00a17","fromSide":"right","toNode":"8428c4b9e68714d9","toSide":"left"},
+		{"id":"04a6cea67e7b348a","fromNode":"8428c4b9e68714d9","fromSide":"right","toNode":"02199aac352aab38","toSide":"left"},
+		{"id":"89fac5421543b5c1","fromNode":"8428c4b9e68714d9","fromSide":"right","toNode":"6fafad7cf6cbd5e6","toSide":"left"},
+		{"id":"f1daa899ca2a888f","fromNode":"8428c4b9e68714d9","fromSide":"top","toNode":"38d12beedad1f3e1","toSide":"bottom"},
+		{"id":"864554a21fa7049f","fromNode":"38d12beedad1f3e1","fromSide":"right","toNode":"6fafad7cf6cbd5e6","toSide":"left"},
+		{"id":"c95caf3af48cb6ab","fromNode":"8428c4b9e68714d9","fromSide":"right","toNode":"37d2be857da55ab3","toSide":"left"}
+	]
+}
