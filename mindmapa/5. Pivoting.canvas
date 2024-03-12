@@ -1,17 +1,19 @@
 {
 	"nodes":[
-		{"id":"c0d47e8669141936","type":"file","file":"mindmapa/tools/Metasploit/msf_port_forwarding.md","x":-1300,"y":345,"width":1120,"height":355},
-		{"id":"fcbe0d3d326673f8","type":"file","file":"mindmapa/tools/Metasploit/msf_pivoting.md","x":-1300,"y":-720,"width":1120,"height":1000},
 		{"id":"53fc5839abe4ec9d","type":"text","text":"PIVOTING","x":-80,"y":-720,"width":250,"height":50,"color":"1"},
-		{"id":"6b1a357178ce2d8a","type":"text","text":"# $ chisel\nhttps://exploit-notes.hdks.org/exploit/network/port-forwarding/port-forwarding-with-chisel/\n\n# Port forwarding\n```bash\n# target box\n$ chisel server [-p <listen-port>]\n\n# kali\n$ chisel client <serverIP:port> [<local_host>]<local_port>:<serverIP:port>\n```\n# Reverse Port Forwarding\n```bash\n# Kali\n$ chisel server [-p <port>] --reverse [--keepalive 5s]# attack machine\n\n# target box\n$ chisel client <serverIP:port> <remote> [<remote>] [<remote>]\n$ chisel client <serverIP:port> R:80:172.16.22.2:80 R:3000:localhost:3000\n```\n","x":240,"y":-233,"width":785,"height":730},
-		{"id":"10dd75e3fd818e73","type":"text","text":"# $ ligolo-ng\nhttps://kalilinuxtutorials.com/ligolo-ng/","x":240,"y":547,"width":454,"height":153},
-		{"id":"0a6885f889bb2415","x":1140,"y":-823,"width":785,"height":1180,"type":"file","file":"mindmapa/tools/ssh/ssh_port_forwarding.md"}
+		{"id":"867a5beaa5bbafa3","type":"text","text":"# $ vpnpivot\nhttps://github.com/0x36/VPNPivot/blob/master/README.md","x":996,"y":-670,"width":453,"height":153},
+		{"id":"fcbe0d3d326673f8","type":"file","file":"mindmapa/tools/Metasploit/msf_pivoting.md","x":-1300,"y":-560,"width":1120,"height":700},
+		{"id":"6b1a357178ce2d8a","type":"text","text":"# $ chisel\nhttps://exploit-notes.hdks.org/exploit/network/port-forwarding/port-forwarding-with-chisel/\n\n# Port forwarding\n```bash\n# target box\n$ chisel server [-p <listen-port>]\n\n# kali\n$ chisel client <serverIP:port> [<local_host>]<local_port>:<serverIP:port>\n```\n# Reverse Port Forwarding\n```bash\n# Kali\n$ chisel server [-p <port>] --reverse [--keepalive 5s]# attack machine\n\n# target box\n$ chisel client <serverIP:port> <remote> [<remote>] [<remote>]\n$ chisel client <serverIP:port> R:80:172.16.22.2:80 R:3000:localhost:3000\n```\n","x":960,"y":-170,"width":785,"height":558},
+		{"id":"0a6885f889bb2415","type":"file","file":"mindmapa/tools/ssh/ssh_port_forwarding.md","x":80,"y":-308,"width":785,"height":1040},
+		{"id":"10dd75e3fd818e73","type":"text","text":"# $ ligolo-ng\nhttps://kalilinuxtutorials.com/ligolo-ng/","x":1040,"y":-517,"width":454,"height":153},
+		{"id":"c0d47e8669141936","type":"file","file":"mindmapa/tools/Metasploit/msf_port_forwarding.md","x":-1300,"y":280,"width":1120,"height":215}
 	],
 	"edges":[
-		{"id":"95224e21074d63f1","fromNode":"53fc5839abe4ec9d","fromSide":"left","toNode":"fcbe0d3d326673f8","toSide":"right"},
-		{"id":"e575f09309252d0b","fromNode":"53fc5839abe4ec9d","fromSide":"bottom","toNode":"10dd75e3fd818e73","toSide":"left"},
+		{"id":"95224e21074d63f1","fromNode":"53fc5839abe4ec9d","fromSide":"left","toNode":"fcbe0d3d326673f8","toSide":"top"},
+		{"id":"e575f09309252d0b","fromNode":"53fc5839abe4ec9d","fromSide":"right","toNode":"10dd75e3fd818e73","toSide":"left"},
 		{"id":"fef71d05a02e10d6","fromNode":"53fc5839abe4ec9d","fromSide":"bottom","toNode":"c0d47e8669141936","toSide":"right"},
-		{"id":"c9fb831faa0d5b86","fromNode":"53fc5839abe4ec9d","fromSide":"bottom","toNode":"6b1a357178ce2d8a","toSide":"left"},
-		{"id":"39f3c84a1b37f441","fromNode":"53fc5839abe4ec9d","fromSide":"bottom","toNode":"0a6885f889bb2415","toSide":"left"}
+		{"id":"c9fb831faa0d5b86","fromNode":"53fc5839abe4ec9d","fromSide":"bottom","toNode":"6b1a357178ce2d8a","toSide":"top"},
+		{"id":"39f3c84a1b37f441","fromNode":"53fc5839abe4ec9d","fromSide":"bottom","toNode":"0a6885f889bb2415","toSide":"top"},
+		{"id":"33a6920618991942","fromNode":"53fc5839abe4ec9d","fromSide":"right","toNode":"867a5beaa5bbafa3","toSide":"left"}
 	]
 }

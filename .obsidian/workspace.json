@@ -4,20 +4,51 @@
     "type": "split",
     "children": [
       {
-        "id": "bfde9e2a05b0c61a",
+        "id": "32481b42b1764858",
         "type": "tabs",
         "children": [
           {
-            "id": "0fcb3c5ddcbfabf3",
+            "id": "fc65e62617c41919",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "mindmapa/BOF/BOF.canvas",
+                "viewState": {
+                  "x": 2637.5,
+                  "y": 2280,
+                  "zoom": -0.13450103558841145
+                }
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "2a2b6dde5ac53b34",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notatki/eCPPT/Main_eCPPT.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "da852f24a94078c4",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
-                "file": "mindmapa/6. Post.canvas",
+                "file": "mindmapa/0. Reconnaissance.canvas",
                 "viewState": {
-                  "x": 4175,
-                  "y": -3017.5,
-                  "zoom": -0.8172666063628081
+                  "x": 946.0027142585657,
+                  "y": 572.2628416401999,
+                  "zoom": -0.27542640539616486
                 }
               }
             }
@@ -51,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "bad",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mindmapa/4. File transfer.canvas",
+                "file": "mindmapa/BOF/BOF.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "mindmapa/4. File transfer.canvas",
+                "file": "mindmapa/BOF/BOF.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mindmapa/4. File transfer.canvas"
+                "file": "mindmapa/BOF/BOF.canvas"
               }
             }
           }
@@ -150,238 +181,62 @@
       "command-palette:Open command palette": false
     }
   },
-  "floating": {
-    "id": "ee74d89e9ebb8125",
-    "type": "floating",
-    "children": [
-      {
-        "id": "0bb942ca7053d2a5",
-        "type": "window",
-        "children": [
-          {
-            "id": "8e29af1bfbdc738d",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "92edf6daabf2bb24",
-                "type": "leaf",
-                "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "mindmapa/0. Reconnaissance.canvas",
-                    "viewState": {
-                      "x": 538,
-                      "y": 903,
-                      "zoom": -1.4069740845834193
-                    }
-                  }
-                }
-              },
-              {
-                "id": "987d3f89d382d561",
-                "type": "leaf",
-                "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "mindmapa/1. Host Discovery.canvas",
-                    "viewState": {
-                      "x": -180,
-                      "y": 325,
-                      "zoom": -1.0179054314462959
-                    }
-                  }
-                }
-              },
-              {
-                "id": "ab343adc7cf8c022",
-                "type": "leaf",
-                "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "mindmapa/2. Services.canvas",
-                    "viewState": {
-                      "x": -55.25824648249926,
-                      "y": 3886.521663045931,
-                      "zoom": -0.3333333333333334
-                    }
-                  }
-                }
-              },
-              {
-                "id": "83e95cc114980aa9",
-                "type": "leaf",
-                "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "mindmapa/2.5. Attacks.canvas",
-                    "viewState": {
-                      "x": -2823.995921925749,
-                      "y": 44.47598935060523,
-                      "zoom": -1
-                    }
-                  }
-                }
-              },
-              {
-                "id": "080aa1244448ccce",
-                "type": "leaf",
-                "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "mindmapa/3. Gaining Acces.canvas",
-                    "viewState": {
-                      "x": -1600,
-                      "y": -200,
-                      "zoom": -0.6069888070511553
-                    }
-                  }
-                }
-              },
-              {
-                "id": "07636c5904dba71a",
-                "type": "leaf",
-                "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "mindmapa/4. File transfer.canvas",
-                    "viewState": {
-                      "x": 663.9999999999995,
-                      "y": 1243.9999999999998,
-                      "zoom": -1.9999999999999998
-                    }
-                  }
-                }
-              },
-              {
-                "id": "63bba7cb86668fb0",
-                "type": "leaf",
-                "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "mindmapa/5. Pivoting.canvas",
-                    "viewState": {
-                      "x": -314.6872495205344,
-                      "y": -292.3068010350736,
-                      "zoom": -0.5972571935978217
-                    }
-                  }
-                }
-              },
-              {
-                "id": "2f30f00decc14b2e",
-                "type": "leaf",
-                "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "mindmapa/6. Post.canvas",
-                    "viewState": {
-                      "x": 13426.840384847741,
-                      "y": -5174.83869882777,
-                      "zoom": 3.3306690738754696e-16
-                    }
-                  }
-                }
-              },
-              {
-                "id": "70275893657cebaa",
-                "type": "leaf",
-                "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "mindmapa/protocols/Protocols.canvas",
-                    "viewState": {
-                      "x": -1023.4217559292601,
-                      "y": 443.01312447594944,
-                      "zoom": -1.6666666666666665
-                    }
-                  }
-                }
-              },
-              {
-                "id": "9a0d4e0bccf2f82c",
-                "type": "leaf",
-                "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "LAB ICMP Redirect attack.canvas",
-                    "viewState": {
-                      "x": 1410,
-                      "y": 135,
-                      "zoom": -1.060760910408093
-                    }
-                  }
-                }
-              }
-            ],
-            "currentTab": 5
-          }
-        ],
-        "direction": "vertical",
-        "x": 1579,
-        "y": 515,
-        "width": 768,
-        "height": 786,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "07636c5904dba71a",
+  "active": "fc65e62617c41919",
   "lastOpenFiles": [
-    "mindmapa/2. Services.canvas",
-    "mindmapa/6. Post.canvas",
-    "mindmapa/tools/cadaver",
-    "mindmapa/tools/cadaver/WebDAV.md",
-    "mindmapa/4. File transfer.canvas",
-    "mindmapa/tools/Metasploit/msf_pivoting.md",
-    "mindmapa/3. Gaining Acces.canvas",
-    "mindmapa/2.5. Attacks.canvas",
-    "mindmapa/5. Pivoting.canvas",
-    "notatki/PenTest/C2/Metasploit.md",
-    "mindmapa/tools/powershell-empire",
-    "notatki/PenTest/Post-Exploitation/Windows_Credential_Dumping.md",
-    "mindmapa/tools/xfreerdp/xfreerdp_passthehash.md",
-    "notatki/inne/BASH.md",
-    "mindmapa/protocols/LM_NTLM_NTLMv2.md",
-    "LAB ICMP Redirect attack.canvas",
-    "mindmapa/protocols/NetBIOS.md",
-    "mindmapa/protocols/Protocols.canvas",
-    "mindmapa/NetBIOS.md",
-    "mindmapa/LM_NTLM_NTLMv2.md",
-    "mindmapa/7. Social Engineering.canvas",
-    "mindmapa/tools/crackmapexec/crackmapexec_smb.md",
-    "notatki/PenTest/Tools/crackmapexec.md",
-    "mindmapa/tools/ssh/ssh_port_forwarding.md",
-    "mindmapa/tools/ssh/Untitled.md",
-    "notatki/PenTest/Tools/(reverse) shell.md",
-    "mindmapa/tools/ssh/sshfs.md",
-    "mindmapa/tools/ssh/scp.md",
-    "notatki/PenTest/Tools/responder.md",
-    "notatki/PenTest/Tools/podman.md",
-    "notatki/PenTest/Tools/mimikatz.md",
-    "notatki/PenTest/Tools/(reverse) shell 1.md",
-    "notatki/PenTest/Initial_Access/Deploying_Payload.md",
-    "notatki/PenTest/Post-Exploitation/Linux_Local_Enumeration_And_Privilege_Escalation.md",
-    "notatki/PenTest/Post-Exploitation/Linux_Persistence.md",
-    "notatki/PenTest/Materials/Materials.md",
     "mindmapa/0. Reconnaissance.canvas",
+    "notatki/PenTest/C2/Metasploit.md",
+    "mindmapa/tools/cadaver/WebDAV.md",
+    "mindmapa/BOF/BOF.canvas",
+    "mindmapa/6. Post.canvas",
+    "mindmapa/2.5. Attacks.canvas",
+    "mindmapa/1. Host Discovery.canvas",
+    "mindmapa/2. Services.canvas",
+    "notatki/eCPPT/Main_eCPPT.md",
+    "mindmapa/BOF/Pasted image 20240307083721.png",
+    "notatki/eCPPT/ASSEMBLER_program.md",
+    "mindmapa/BOF/Pasted image 20240307090405.png",
+    "mindmapa/BOF/Pasted image 20240307092706.png",
+    "mindmapa/BOF",
+    "notatki/eCPPT/Stos (stack) i sterta (heap).md",
+    "notatki/eCPPT/Crypto.md",
+    "mindmapa/PHP_server_data_exfiltration.md",
+    "mindmapa/4. File transfer.canvas",
+    "mindmapa/tools/WebAPP/gobuster.md",
+    "notatki/PenTest/Materials/Materials.md",
+    "notatki/PenTest/Tools/johntheripper.md",
+    "notatki/PenTest/Initial_Access/Internal_Network_Mapping.md",
+    "notatki/PenTest/Initial_Access/Deploying_Payload.md",
+    "mindmapa/5. Pivoting.canvas",
+    "mindmapa/tools/Powershell/Powershell.canvas",
+    "mindmapa/tools/Powershell/Powershell_inmemory_file_download_and_execution.md",
+    "notatki/PenTest/Tools/(reverse) shell.md",
+    "mindmapa/tools/WebAPP/ffuf.md",
+    "notatki/PenTest/WebApp_Pentesting/WebApp_pentesting.md",
+    "mindmapa/tools/dns/nslookup.md",
+    "mindmapa/tools/dns",
+    "mindmapa/tools/dns/dnsrecon.md",
+    "mindmapa/tools/dns/dnsenum.md",
+    "mindmapa/tools/WebAPP/WebApp pentest.canvas",
+    "notatki/inne/Skanowanie maszyny.md",
+    "mindmapa/tools/WebAPP/proxy-serwer-ws.md",
+    "mindmapa/tools/WebAPP/whatweb.md",
+    "mindmapa/tools/WebAPP",
+    "mindmapa/tools/web enumeration",
+    "notatki/PenTest/Tools/gobuster.md",
+    "mindmapa/tools/Powershell/Powershell_to_disc_file_download_and_execution.md",
+    "mindmapa/tools/WebAPP/sqlmap.md",
+    "Pasted image 20240222153306.png",
+    "mindmapa/tools/Powershell",
+    "mindmapa/tools/ssh/local_port_forwarding.png",
+    "mindmapa/tools/cadaver",
+    "mindmapa/tools/powershell-empire",
     "mindmapa/tools/ssh",
     "Pasted image 20240125112212.png",
     "mindmapa/protocols",
     "mindmapa/tools/netcat",
-    "mindmapa/tools/snmpwalk",
-    "mindmapa/tools/hydra",
-    "mindmapa/tools/xfreerdp",
-    "mindmapa/tools/crackmapexec",
-    "mindmapa/tools/nmap",
     "mindmapa/Pentest.png",
     "notatki/inne/piping.png",
     "notatki/inne/input-output.png",
-    "Pasted image 20240104110707.png",
-    "Pasted image 20240103114842.png",
-    "notatki/eCPPT/images/Pasted image 20240103113009.png",
-    "notatki/eCPPT/images/Pasted image 20240103105412.png",
-    "notatki/eCPPT/images/Pasted image 20240103105552.png",
-    "notatki/eCPPT/images/Pasted image 20240103105435.png"
+    "Pasted image 20240104110707.png"
   ]
 }

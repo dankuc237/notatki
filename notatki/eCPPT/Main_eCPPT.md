@@ -54,20 +54,6 @@ Source index for string operations. Essentially, this stores the start of the st
 
 kończy wykonanie procedury i nakazuje powrót do program wywołującego
 
-# ASLR (Address space layout randomization)
-
-[Address space layout randomization](https://en.wikipedia.org/wiki/Address_space_layout_randomization)
-
-## Bypas
-https://www.corelan.be/index.php/2011/07/03/universal-depaslr-bypass-with-msvcr71-dll-and-mona-py/
-
-### Bruteforce
-
-### NOP-Sled
-
-# DEP (Data Execution Prevention)
-
-celem jest uniemożliwienie wykonywania kodu z segmentu danych. Pomaga to w ochronie przed exploitami wykorzystującymi przepełnienie bufora.
 
 # Programy
 
@@ -115,7 +101,10 @@ https://learn.microsoft.com/pl-pl/sysinternals/downloads/process-explorer
 #TODO
 
 # Exploiting Buffer Overflows
-
+|                Memory                |                            Stack                            |                                                                                                                     |
+| :----------------------------------: | :---------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
+| ![[Pasted image 20240307083721.png]] |            ![[Pasted image 20240307090405.png]]             |                                        ![[Pasted image 20240307092706.png]]                                         |
+|        0. Memory with program        | 1. Overwriting buffer (from lower address to upper address) | <br>2. Overwriting Base Pointer (EBP)<br>3. Overwriting Return (EIP) to memory address with NOP sleed and shellcode |
 https://www.ired.team/offensive-security/code-injection-process-injection/binary-exploitation
 Atak buffer overflow na stosie można przeprowadzić w następujący sposób:
 

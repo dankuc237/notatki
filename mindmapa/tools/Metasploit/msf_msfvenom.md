@@ -64,3 +64,8 @@ $ cat binshellcode.bin | msfvenom -p - -a x86 --platform win -e x86/shikata_ga_n
 -e x86/shikata_ga_nai: specifies the encoder to use
 -f c: sets the output format (in this case C)
 ```
+## Convert a PowerShell script into an executable file
+```bash
+$ msfvenom -p windows/x64/exec CMD="powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile -File yourscript.ps1" -f exe -o outputfile.exe
+
+```
